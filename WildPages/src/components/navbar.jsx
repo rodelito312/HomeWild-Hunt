@@ -29,7 +29,7 @@ const Navbar = () => {
             <a href="#" className=" py-2 px-3 mx-3 rounded-md hover:text-gray-400 ">
               List Property
             </a> 
-            <a href="#" className="bg-gradient-to-r from-orange-500 to-orange-800 py-2 px-3 rounded-md hover:text-gray-200">
+            <a href="#" className="bg-blue-700 py-2 px-3 rounded-md hover:text-gray-200 text-white">
               Log in
             </a>          
           </div>
@@ -49,12 +49,12 @@ const Navbar = () => {
               ))}
             </ul>
             <div className="flex space-x-6">
-              <a href="#" className="py-2 px-3 border rounded-md">
+              <a href="#" className="py-2 px-3 border rounded-md text-white">
                 Log in
               </a>
               <a
                 href="#"
-                className="py-2 px-3 rounded-md bg-gradient-to-r from-orange-500 to-orange-800"
+                className="py-2 px-3 rounded-md bg-blue-700 text-white"
               >
                 Create an account
               </a>

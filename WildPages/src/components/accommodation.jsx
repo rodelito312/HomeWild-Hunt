@@ -28,7 +28,7 @@ const Pricing = () => {
               </ul>
               <a
                 href="#"
-                className="inline-flex justify-center items-center w-full h-12 p-5 mt-12 text-lg font-semibold text-white bg-orange-600 hover:bg-orange-700 rounded-lg transition duration-300"
+                className="inline-flex justify-center items-center w-full h-12 p-5 mt-12 text-lg font-semibold text-white bg-blue-700 hover:bg-blue-900 rounded-lg transition duration-300"
               >
                 Book Now
               </a>
