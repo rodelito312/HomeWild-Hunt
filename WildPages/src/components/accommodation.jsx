@@ -11,20 +11,16 @@ const Pricing = () => {
         {pricingOptions.map((option, index) => (
           <div key={index} className="w-full sm:w-1/2 lg:w-1/3 p-4">
             <div className="p-10 border border-neutral-50 bg-white rounded-xl shadow-lg">
-              <p className="text-4xl mb-6 font-semibold text-orange-500">
+              <p className="text-4xl mb-6 font-semibold">
                 {option.title}
-                {option.title === "Comfort Stay" && (
-                  <span className="bg-gradient-to-r from-orange-500 to-red-400 text-transparent bg-clip-text text-xl mb-4 ml-2">
-                    (Popular Choice)
-                  </span>
-                )}
+                {option.title === "Comfort Stay"}
               </p>
               <p className="mb-6 text-5xl font-bold text-white">
                 {option.price}
               </p>
               <ul>
                 {option.features.map((feature, index) => (
-                  <li key={index} className="mt-5 flex items-center text-black">
+                  <li key={index} className="mt-5 flex items-center text-amber-800">
                     <CheckCircle2 className="text-green-400" />
                     <span className="ml-3">{feature}</span>
                   </li>
