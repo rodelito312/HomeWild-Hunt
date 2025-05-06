@@ -1,7 +1,18 @@
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import homeph from "../assets/Residence.jpg";
 import { Search } from "lucide-react";
 
 const HomeSection = () => {
+  const navigate = useNavigate();
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    // Navigate to the property listing page with the search term as a URL parameter
+    navigate(`/properties?keyword=${encodeURIComponent(searchTerm)}`);
+  };
+
   return (
     <section
       id="home"
@@ -27,13 +38,15 @@ const HomeSection = () => {
           Easily discover, book, and manage rental spaces with trustworthy hosts—because finding a home should be simple.
         </p>
         <div className="flex justify-center mt-10">
-          <form className="w-full max-w-2xl">
+          <form className="w-full max-w-2xl" onSubmit={handleSearch}>
             <div className="flex items-center bg-white shadow-lg rounded-lg overflow-hidden">
               <Search className="w-6 h-6 text-gray-600 mx-4" />
               <input
                 type="search"
                 placeholder="Search for city or address"
                 className="w-full p-4 text-lg text-gray-800 focus:outline-none"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
                 required
               />
               <button
